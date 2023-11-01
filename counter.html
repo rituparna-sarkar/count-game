@@ -7,36 +7,9 @@
     <title>Counter</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
 </head>
-<style>
-    .container {
-        margin: 100px auto;
-        padding-top: 30px;
-        text-align: center;
-        background-color: whitesmoke;
-        width: 400px;
-        height: 250px;
-      }
 
-    .container h2 {
-        font-size: 28px;
-        margin-top: 10px;
-        
-    }
-
-    #number {
-        font-size: 35px;
-        margin-bottom: 30px;
-        margin-top: 20px;
-    }
-
-    input {
-        font-size: 20px;
-        margin: 8px;
-        padding: 1px 8px;
-
-    }
-</style>
 
 <body>
     <div class="container shadow p-3 mb-5 bg-white rounded">
@@ -47,55 +20,7 @@
         <input type="button" value="+" id="positive" onclick="green(this)">
 
     </div>
-    <script>
-        var number = 0;
-
-        function green(element) {
-            element.style.backgroundColor = "green"
-            var new_number = number + 1;
-            number = new_number;
-            console.log(new_number);
-            document.getElementById("number").innerHTML = new_number;
-            document.getElementById("number").style.color = "green"
-            document.getElementById('negative').style.setProperty('background-color', 'initial');
-        }
-
-
-
-        function red(element) {
-            element.style.backgroundColor = "red"
-            document.getElementById('positive').style.setProperty('background-color', 'initial');
-
-            if (number <= 0) {
-                new_number = number - 1;
-
-                document.getElementById("number").innerHTML = new_number;
-                document.getElementById("number").style.color = "red";
-               
-                number = new_number;
-            }
-
-            if (number > 0) {
-                new_number = number - 1;
-                document.getElementById("number").innerHTML = new_number;
-                number = new_number;
-                document.getElementById("number").style.color = "green"
-            }
-        }
-
-        function reset(element) {
-            number = 0;
-            document.getElementById("number").innerHTML = number;
-            document.getElementById("number").style.color = 'black';
-            document.getElementById('negative').style.setProperty('background-color', 'initial');
-            document.getElementById('positive').style.setProperty('background-color', 'initial');
-        }
-
-
-
-
-
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
